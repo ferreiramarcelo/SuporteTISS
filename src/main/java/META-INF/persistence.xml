@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-	<persistence-unit name="SuporteTISS">
-	</persistence-unit>
+	
+	
+		<!-- <persistence-unit name="SuporteTISS">
+		
+		<properties>
+		  <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+	      <property name="javax.persistence.jdbc.url"    value="jdbc:sqlserver://10.0.0.52:1433;databaseName=CacDb" />
+	      <property name="javax.persistence.jdbc.user" value="tiss" />
+	      <property name="javax.persistence.jdbc.password" value="1z2X3c4V" />
+	      <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+	      <property name="show_sql" value="true"/>
+	      <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+		</properties>
+	</persistence-unit> -->
+	
+	<persistence-unit name="SuporteTISSLocal">
+		<class>br.org.cac.tiss.suporte.model.Amb</class>
+		<class>br.org.cac.tiss.suporte.model.AmbId</class>
+		<class>br.org.cac.tiss.suporte.model.Atendimento</class>
+		<class>br.org.cac.tiss.suporte.model.AtendimentoId</class>
+		<class>br.org.cac.tiss.suporte.model.CancelamentoCarteira</class>
+		<class>br.org.cac.tiss.suporte.model.CancelamentoCarteiraId</class>
+		<class>br.org.cac.tiss.suporte.model.CgBrasindice</class>
+		<class>br.org.cac.tiss.suporte.model.CgDiariaGasTaxa</class>
+		<class>br.org.cac.tiss.suporte.model.CgDiariaGasTaxaId</class>
+		<class>br.org.cac.tiss.suporte.model.CgMaterialOpme</class>
+		<class>br.org.cac.tiss.suporte.model.CgMedicamento</class>
+		<class>br.org.cac.tiss.suporte.model.CgSimproInicial</class>
+		<class>br.org.cac.tiss.suporte.model.CgSimproInicialId</class>
+		<class>br.org.cac.tiss.suporte.model.EmissaoCarteira</class>
+		<class>br.org.cac.tiss.suporte.model.EmissaoCarteiraId</class>
+		<class>br.org.cac.tiss.suporte.model.Guia</class>
+		<class>br.org.cac.tiss.suporte.model.GuiaId</class>
+		<class>br.org.cac.tiss.suporte.model.GuiaOcupacional</class>
+		<class>br.org.cac.tiss.suporte.model.Pessoa</class>
+		<class>br.org.cac.tiss.suporte.model.Prestador</class>
+		<class>br.org.cac.tiss.suporte.model.PrestadorCadastrado</class>
+		<class>br.org.cac.tiss.suporte.model.Procedimento</class>
+		<class>br.org.cac.tiss.suporte.model.ProcedimentoId</class>
+		<class>br.org.cac.tiss.suporte.model.SubProcesso</class>
+		<class>br.org.cac.tiss.suporte.model.SubProcessoId</class>
+		<class>br.org.cac.tiss.suporte.model.SxmlHistoricoTransmissaoTiss</class>
+		<class>br.org.cac.tiss.suporte.model.SxmlUsuario</class>
+		<class>br.org.cac.tiss.suporte.model.TipoGuia</class>
+		<class>br.org.cac.tiss.suporte.model.TipoTabelaAmb</class>
+ 
+     <properties>
+        <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
+        <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:/home/rrm/banco/CacDb.dbo;sql.syntax_mys=true;hsqldb.lock_file=false" />
+        <property name="javax.persistence.jdbc.user" value="rrm" />
+        <property name="javax.persistence.jdbc.password" value="123" />
+ 		<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
+		<property name="hibernate.show_sql" value="true" />
+		<property name="hibernate.format_sql" value="true" />		   
+	    <property name="hibernate.hbm2ddl.auto" value="update" />
+     </properties>
+     
+    </persistence-unit>
+    
 </persistence>
