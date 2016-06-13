@@ -25,7 +25,7 @@
 		<class>br.org.cac.tiss.suporte.model.CancelamentoCarteiraId</class>
 		<class>br.org.cac.tiss.suporte.model.CgBrasindice</class>
 		<class>br.org.cac.tiss.suporte.model.CgDiariaGasTaxa</class>
-		<class>br.org.cac.tiss.suporte.model.CgDiariaGasTaxaId</class>
+		<class>br.org.cac.tiss.suportupdatel.CgDiariaGasTaxaId</class>
 		<class>br.org.cac.tiss.suporte.model.CgMaterialOpme</class>
 		<class>br.org.cac.tiss.suporte.model.CgMedicamento</class>
 		<class>br.org.cac.tiss.suporte.model.CgSimproInicial</class>
@@ -53,7 +53,7 @@
 		<property name="javax.persistence.jdbc.password" value="" />
 		
 		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
-		<property name="hibernate.show_sql" value="true" />
+		<property name="hibernate.show_sql" value="false" />
 		<property name="hibernate.hbm2ddl.auto" value="update" />
 		<property name="hibernate.format_sql" value="true" />		   
      </properties>
