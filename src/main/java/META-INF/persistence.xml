@@ -13,6 +13,19 @@
 	      <property name="show_sql" value="true"/>
 	      <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
 		</properties>
+		
+		<properties>
+	     	<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/SuporteTISSLocal" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.format_sql" value="true" />		   
+	     </properties>
+		
 	</persistence-unit> -->
 	
 	<persistence-unit name="SuporteTISSLocal">
@@ -47,16 +60,17 @@
 		<class>br.org.cac.tiss.suporte.model.TipoGuia</class>
 		<class>br.org.cac.tiss.suporte.model.TipoTabelaAmb</class>
  
-     <properties><property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/SuporteTISSLocal" />
-		<property name="javax.persistence.jdbc.user" value="root" />
-		<property name="javax.persistence.jdbc.password" value="" />
-		
-		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
-		<property name="hibernate.show_sql" value="false" />
-		<property name="hibernate.hbm2ddl.auto" value="update" />
-		<property name="hibernate.format_sql" value="true" />		   
-     </properties>
+     	<properties>
+		  <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+	      <property name="javax.persistence.jdbc.url"    value="jdbc:sqlserver://10.0.0.52:1433;databaseName=CacDb" />
+	      <property name="javax.persistence.jdbc.user" value="tiss" />
+	      <property name="javax.persistence.jdbc.password" value="1z2X3c4V" />
+	      <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+	      <property name="show_sql" value="true"/>
+	      <property name="hibernate.format_sql" value="true" />	
+	      <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+	      
+		</properties>
      
     </persistence-unit>
     
