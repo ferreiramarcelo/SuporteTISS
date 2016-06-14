@@ -2,12 +2,16 @@ package br.org.cac.tiss.suporte.dao;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaQuery;
 
+import br.org.cac.tiss.suporte.util.JPAUtil;
+
 public class DAO<T> implements Serializable {
 	  private final Class<T> classe;
-	  private EntityManager em;
+	  
+	  private EntityManager em = new JPAUtil().getEntityManager();
 	 
 	  public DAO(Class<T> classe) {
 	    this.classe = classe;
@@ -25,8 +29,8 @@ public class DAO<T> implements Serializable {
 	    em.merge(obj);
 	  }
 	 
-	  public List listaTodos() {
-	    CriteriaQuery query = em.getCriteriaBuilder().createQuery(classe);
+	  public List<T> listaTodos() {
+	    CriteriaQuery<T> query = em.getCriteriaBuilder().createQuery(classe);
 	    query.from(classe);
 	    return em.createQuery(query).getResultList();
 	  }

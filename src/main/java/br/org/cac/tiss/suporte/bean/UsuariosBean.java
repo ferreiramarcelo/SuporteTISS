@@ -6,7 +6,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import br.org.cac.tiss.suporte.dao.UsuarioDao;
+import br.org.cac.tiss.suporte.dao.DAO;
 import br.org.cac.tiss.suporte.model.SxmlUsuario;
 
 @Named
@@ -14,10 +14,11 @@ import br.org.cac.tiss.suporte.model.SxmlUsuario;
 public class UsuariosBean {
 	
 	@Inject
-	UsuarioDao dao;
+	DAO<SxmlUsuario> daogenerico;
 	
 	public List<SxmlUsuario> listaUsuarios(){
-		return dao.listaTodos();
+		List<SxmlUsuario> lista = daogenerico.listaTodos();
+		return lista;
 	}
 
 }

@@ -10,14 +10,18 @@ import javax.persistence.Persistence;
 @RequestScoped
 public class JPAUtil {
 	
-	EntityManager manager;
+	private static EntityManager manager;
+	
+	private static EntityManagerFactory factory;
 	
 	@Produces @RequestScoped
 	public EntityManager getEntityManager(){
-		if(manager == null){
-			EntityManagerFactory factory = Persistence.createEntityManagerFactory("SuporteTISSLocal");
-			manager = factory.createEntityManager();
+		if(factory == null){
+			factory = Persistence.createEntityManagerFactory("SuporteTISSLocal");
+			System.out.println("criando entity manager factory: "+factory.toString());
 		}
+		manager = factory.createEntityManager();
+		System.out.println("injetando novo entity manager gerado: "+manager.toString());
 		
 		return manager;
 	}
