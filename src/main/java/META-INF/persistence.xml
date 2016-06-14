@@ -25,7 +25,7 @@
 		<class>br.org.cac.tiss.suporte.model.CancelamentoCarteiraId</class>
 		<class>br.org.cac.tiss.suporte.model.CgBrasindice</class>
 		<class>br.org.cac.tiss.suporte.model.CgDiariaGasTaxa</class>
-		<class>br.org.cac.tiss.suportupdatel.CgDiariaGasTaxaId</class>
+		<class>br.org.cac.tiss.suporte.model.CgDiariaGasTaxaId</class>
 		<class>br.org.cac.tiss.suporte.model.CgMaterialOpme</class>
 		<class>br.org.cac.tiss.suporte.model.CgMedicamento</class>
 		<class>br.org.cac.tiss.suporte.model.CgSimproInicial</class>
